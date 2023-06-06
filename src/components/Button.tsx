@@ -12,8 +12,8 @@ export default function Button(props: Props) {
   if (props.download) {
     return (
       <button className="text-myAccent bg-myPrimary rounded-full group">
-        <div className="px-12 py-3 flex items-center justify-center gap-1">
-          <a download href={props.href} className="text-3xl font-semibold">
+        <div className="sm:px-12 sm:py-3  px-6 py-1 flex items-center justify-center gap-1">
+          <a download href={props.href} className=" text-xl sm:text-3xl font-semibold">
             {props.label}
           </a>
           <div className="relative w-[36px] h-[36px]">

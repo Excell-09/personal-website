@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply font-roboto;
+  }
   body {
     @apply bg-myAccent;
   }

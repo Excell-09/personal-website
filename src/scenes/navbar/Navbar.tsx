@@ -25,6 +25,7 @@ export default function Navbar(props: Props) {
       setIsNavActive(false);
     }
   };
+
   const handlerActiveNavLink = () => {
     props.sections.forEach((section) => {
       const sectionTop = section.current?.offsetTop as number;
