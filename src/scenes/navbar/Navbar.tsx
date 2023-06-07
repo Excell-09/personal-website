@@ -19,7 +19,7 @@ export default function Navbar(props: Props) {
   const [isNavLinkActive, setIsNavLinkActive] = React.useState("home");
 
   const handlerActiveNav = () => {
-    if (Math.round(props.bodyRef.current?.scrollTop as number) > 100) {
+    if (Math.round(props.bodyRef.current?.scrollTop as number) > 250) {
       setIsNavActive(true);
     } else {
       setIsNavActive(false);
@@ -50,7 +50,7 @@ export default function Navbar(props: Props) {
   return (
     <>
       <header
-        className={`bg-mySecondary rounded-b-[40px] fixed w-full transition duration-300 delay-75  ${
+        className={`bg-mySecondary rounded-b-[40px] fixed w-full transition duration-300 delay-75 z-50  ${
           isNavActive ? "-translate-y-20" : "translate-y-0"
         }`}
       >
@@ -103,6 +103,7 @@ export default function Navbar(props: Props) {
       -translate-x-1/2 
       transition-all
       duration-300
+      z-50
       ${
         isNavActive ? "-translate-y-0 scale-100" : " -translate-y-full scale-0"
       }`}

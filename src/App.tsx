@@ -20,13 +20,13 @@ function App() {
         sections={[homeSection, skillSection, projectsSection]}
       />
       <main>
-        <section ref={homeSection} id="home" className="h-screen">
+        <section ref={homeSection} id="home">
           <HomeSection />
         </section>
-        <section ref={skillSection} id="skills" className="h-screen">
+        <section ref={skillSection} id="skills">
           <SkillsSection />
         </section>
-        <section ref={projectsSection} id="projects" className="h-screen">
+        <section ref={projectsSection} id="projects">
           <ProjectsSection />
         </section>
       </main>
