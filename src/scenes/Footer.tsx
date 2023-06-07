@@ -3,7 +3,7 @@ import { BsArrowUpCircle } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <footer className="text-center h-[50vh] bg-mySecondary rounded-t-3xl flex flex-col justify-center">
+    <footer className="text-center h-[45vh] bg-mySecondary rounded-t-3xl flex flex-col justify-center">
       <a href="#home">
         <BsArrowUpCircle
           size={38}

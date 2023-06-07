@@ -19,11 +19,9 @@ import IconSkill from "./IconSkill";
 const SKILLS_TECH = [
   { label: "React Js", Icon: SiReact },
   { label: "Next Js", Icon: SiNextdotjs },
-  { label: "Django", Icon: SiDjango },
   { label: "TailwindCss", Icon: SiTailwindcss },
   { label: "Typescript", Icon: SiTypescript },
   { label: "Javascript", Icon: SiJavascript },
-  { label: "Python", Icon: SiPython },
   { label: "Express Js", Icon: SiExpress },
   { label: "Node Js", Icon: SiNodedotjs },
   { label: "Mongo DB", Icon: SiMongodb },

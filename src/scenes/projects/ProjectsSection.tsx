@@ -5,12 +5,6 @@ import ProjectCard from "./ProjectCard";
 
 const ALLPROJECTS = [
   {
-    title: "News Portal",
-    image: projectsImage.portalnews,
-    category: ["all", "django", "python", "react-js"],
-    link: "https://portal-berita-jun-choi.vercel.app",
-  },
-  {
     title: "Online Shop",
     image: projectsImage.myshop,
     category: ["all", "react-js", "typescript"],
