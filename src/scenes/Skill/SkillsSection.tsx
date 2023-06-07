@@ -3,11 +3,9 @@ import Heading from "../../components/Heading";
 import {
   SiReact,
   SiNextdotjs,
-  SiDjango,
   SiTailwindcss,
   SiTypescript,
   SiJavascript,
-  SiPython,
   SiExpress,
   SiNodedotjs,
   SiMongodb,
