@@ -34,7 +34,7 @@ const SKILLS_TECH = [
 export default function SkillsSection() {
   return (
     <Container>
-      <div className="h-auto grid place-items-center">
+      <div className="h-auto grid place-items-center py-20">
         <div className="text-center">
           <Heading label="What I Can Do" />
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 mt-4 gap-4">

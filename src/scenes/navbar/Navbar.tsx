@@ -98,7 +98,7 @@ export default function Navbar(props: Props) {
       bg-mySecondary 
       rounded-full 
       fixed 
-      top-6 
+      top-4 
       left-1/2 
       -translate-x-1/2 
       transition-all

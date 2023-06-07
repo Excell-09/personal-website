@@ -13,7 +13,11 @@ export default function Button(props: Props) {
     return (
       <button className="text-myAccent bg-myPrimary rounded-full group">
         <div className="sm:px-12 sm:py-3  px-6 py-1 flex items-center justify-center gap-1">
-          <a download href={props.href} className=" text-xl sm:text-3xl font-semibold">
+          <a
+            download
+            href={props.href}
+            className=" text-xl sm:text-3xl font-semibold"
+          >
             {props.label}
           </a>
           <div className="relative w-[36px] h-[36px]">
@@ -33,16 +37,30 @@ export default function Button(props: Props) {
 
   return (
     <button className="text-myAccent bg-myPrimary font-semibold rounded-full group">
-      <a
-        href={props.href}
-        className="sm:px-5 py-2 px-3 flex items-center gap-2 sm:text-base text-sm"
-      >
-        {props.label}
-        <AiOutlineArrowRight
-          size={24}
-          className="group-hover:rotate-90 transition duration-300"
-        />
-      </a>
+      {props.href?.includes("https") ? (
+        <a
+          target="blank"
+          href={props.href}
+          className="sm:px-5 py-2 px-3 flex items-center gap-2 sm:text-base text-sm hover:underline"
+        >
+          {props.label}
+          <AiOutlineArrowRight
+            size={24}
+            className="group-hover:-rotate-45 transition duration-300"
+          />
+        </a>
+      ) : (
+        <a
+          href={props.href}
+          className="sm:px-5 py-2 px-3 flex items-center gap-2 sm:text-base text-sm"
+        >
+          {props.label}
+          <AiOutlineArrowRight
+            size={24}
+            className="group-hover:rotate-90 transition duration-300"
+          />
+        </a>
+      )}
     </button>
   );
 }
