@@ -3,6 +3,7 @@ import Navbar from "./scenes/navbar/Navbar";
 import HomeSection from "./scenes/home/HomeSection";
 import SkillsSection from "./scenes/Skill/SkillsSection";
 import ProjectsSection from "./scenes/projects/ProjectsSection";
+import Footer from "./scenes/footer";
 
 function App() {
   const bodyRef = React.useRef<HTMLDivElement>(null);
@@ -30,6 +31,7 @@ function App() {
           <ProjectsSection />
         </section>
       </main>
+      <Footer/>
     </div>
   );
 }

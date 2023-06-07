@@ -30,7 +30,7 @@ export default function ProjectCard(props: Props): JSX.Element | null {
           alt={props.title}
           className="w-full h-full group-hover:scale-[2] transition-all duration-300"
         />
-        <div className="z-50 absolute top-0 left-0 h-full w-full  grid delay-150 transition-all duration-150">
+        <div className="z-10 absolute top-0 left-0 h-full w-full  grid delay-150 transition-all duration-150">
           <div className="m-auto">
             <Button label="Visit" href={props.link} />
             <div></div>

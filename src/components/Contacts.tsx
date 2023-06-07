@@ -45,7 +45,7 @@ export default function Contacts(props: Props) {
           href={link}
           referrerPolicy=""
         >
-          <Icon size={48} />
+          <Icon size={40} />
         </a>
       ))}
     </>
