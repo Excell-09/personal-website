@@ -5,27 +5,40 @@ import ProjectCard from "./ProjectCard";
 
 const ALLPROJECTS = [
   {
-    title: "Online Shop",
+    title: "Food Store",
+    subtitle: "Online shops for users who want buy food.",
+    image: projectsImage.foodstore,
+    link: "https://github.com/Excell-09/food_store",
+  },
+  {
+    title: "News Portal",
+    subtitle: "News portal for users who want to see news.",
+    image: projectsImage.portalNews,
+    link: "https://portal-berita-jun-choi.vercel.app",
+  },
+  {
+    title: "My Shop",
+    subtitle: "Online shops for users who want buy something.",
     image: projectsImage.myshop,
-    category: ["all", "react-js", "typescript"],
     link: "https://my-shop-junchoi.vercel.app/",
   },
   {
     title: "Instagram Clone",
+    subtitle:
+      "A replica version of the Instagram website showcasing a similar user interface and Some Instagram functionality.",
     image: projectsImage.instagram,
-    category: ["all", "next-js", "typescript"],
     link: "https://instagram-clone-junchoi.vercel.app/",
   },
   {
     title: "Google Clone",
+    subtitle: "A replica version of the Google website showcasing a similar user interface and search functionality",
     image: projectsImage.google,
-    category: ["all", "next-js", "typescript"],
     link: "https://google-clone-jun-choi.vercel.app/",
   },
   {
     title: "Job Portal",
+    subtitle: "Jobs Portal for users who wants to looking a job.",
     image: projectsImage.findjob,
-    category: ["all", "react-js", "javascript"],
     link: "https://smiling-gabardine-foal.cyclic.app",
   },
 ];
@@ -38,13 +51,7 @@ export default function ProjectsSection() {
           <Heading label="My Projects" />
           <div className="grid md:grid-cols-2 mt-6 gap-4 grid-cols-1">
             {ALLPROJECTS.map((project, i) => (
-              <ProjectCard
-                title={project.title}
-                image={project.image}
-                category={project.category}
-                link={project.link}
-                key={i}
-              />
+              <ProjectCard title={project.title} subtitle={project.subtitle} image={project.image} link={project.link} key={i} />
             ))}
           </div>
         </div>

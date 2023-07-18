@@ -7,12 +7,8 @@ export default function HomeSection() {
     <Container>
       <div className="h-screen grid place-items-center">
         <div>
-          <h1 className="text-4xl sm:text-6xl lg:text-9xl  font-bold text-center">
-            I'm Jun Choi
-          </h1>
-          <h6 className="text-sm sm:text-xl font-semibold text-center mt-2">
-            A Junior Front End Developer
-          </h6>
+          <h1 className="text-4xl sm:text-6xl lg:text-9xl  font-bold text-center">I'm Jun Choi</h1>
+          <h6 className="text-sm sm:text-xl font-semibold text-center mt-2">React Js Developer | MERN Developer</h6>
           <div className="text-center mt-4">
             <Button label="Download CV" download href="/personal_file/CV.pdf" />
           </div>

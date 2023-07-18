@@ -11,20 +11,32 @@ import {
   SiMongodb,
   SiHtml5,
   SiCss3,
+  SiPython,
+  SiDjango,
+  SiRedux,
+  SiMysql,
+  SiGithub,
 } from "react-icons/si";
+import { TbBrandGolang } from "react-icons/tb";
 import IconSkill from "./IconSkill";
 
 const SKILLS_TECH = [
+  { label: "HTML", Icon: SiHtml5 },
+  { label: "CSS", Icon: SiCss3 },
   { label: "React Js", Icon: SiReact },
-  { label: "Next Js", Icon: SiNextdotjs },
-  { label: "TailwindCss", Icon: SiTailwindcss },
   { label: "Typescript", Icon: SiTypescript },
   { label: "Javascript", Icon: SiJavascript },
+  { label: "TailwindCss", Icon: SiTailwindcss },
+  { label: "Redux", Icon: SiRedux },
   { label: "Express Js", Icon: SiExpress },
   { label: "Node Js", Icon: SiNodedotjs },
   { label: "Mongo DB", Icon: SiMongodb },
-  { label: "HTML", Icon: SiHtml5 },
-  { label: "CSS", Icon: SiCss3 },
+  { label: "Git", Icon: SiGithub },
+  { label: "Next Js", Icon: SiNextdotjs },
+  { label: "Python", Icon: SiPython },
+  { label: "Django", Icon: SiDjango },
+  { label: "MySQL", Icon: SiMysql },
+  { label: "Golang", Icon: TbBrandGolang },
 ];
 
 export default function SkillsSection() {

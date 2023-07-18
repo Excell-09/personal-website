@@ -2,8 +2,8 @@ import Button from "../../components/Button";
 
 type Props = {
   title: string;
+  subtitle: string;
   image: string;
-  category: string[];
   link: string;
 };
 
@@ -30,10 +30,12 @@ export default function ProjectCard(props: Props): JSX.Element | null {
           alt={props.title}
           className="w-full h-full group-hover:scale-[2] transition-all duration-300"
         />
-        <div className="z-10 absolute top-0 left-0 h-full w-full  grid delay-150 transition-all duration-150">
+        <div className="z-10 absolute top-0 left-0 h-full w-full grid delay-150 transition-all duration-150">
           <div className="m-auto">
+            <h3 className="text-white font-medium text-lg sm:text-2xl">{props.title}</h3>
+            <p className="text-slate-200 font-medium mb-3 px-3">{props.subtitle}</p>
+
             <Button label="Visit" href={props.link} />
-            <div></div>
           </div>
         </div>
       </div>
