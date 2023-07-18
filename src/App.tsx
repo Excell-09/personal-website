@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div ref={bodyRef} className="h-screen overflow-y-auto overflow-x-hidden">
-      <Navbar bodyRef={bodyRef} sections={[homeSection, skillSection, projectsSection, aboutmeSection]} />
+      <Navbar bodyRef={bodyRef} sections={[homeSection, aboutmeSection, skillSection, projectsSection]} />
       <main>
         <section ref={homeSection} id="home">
           <HomeSection />

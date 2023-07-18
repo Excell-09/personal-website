@@ -17,7 +17,7 @@ const NAVLINK = [
 
 export default function Navbar(props: Props) {
   const [isNavActive, setIsNavActive] = React.useState(false);
-  const [CurrentNavLink, setCurrentNavLink] = React.useState("home");
+  const [currentNavLink, setCurrentNavLink] = React.useState("home");
 
   const handlerActiveNav = () => {
     if (Math.round(props.bodyRef.current?.scrollTop as number) > 250) {
@@ -30,7 +30,8 @@ export default function Navbar(props: Props) {
   const handlerActiveNavLink = () => {
     props.sections.forEach((section) => {
       const sectionTop = section.current?.offsetTop as number;
-      if (Math.round(props.bodyRef.current?.scrollTop as number + 200) >= sectionTop) {
+      const bodyTop = Math.round(props.bodyRef.current?.scrollTop as number);
+      if (bodyTop > sectionTop - 250) {
         setCurrentNavLink(section.current?.getAttribute("id") as string);
       }
     });
@@ -66,7 +67,7 @@ export default function Navbar(props: Props) {
                     label={item.label}
                     href={item.href}
                     key={i}
-                    active={item.href.replace("#", "") === CurrentNavLink}
+                    active={item.href.replace("#", "") === currentNavLink}
                   />
                 ))}
               </div>
@@ -102,7 +103,7 @@ export default function Navbar(props: Props) {
               label={item.label}
               href={item.href}
               key={i}
-              active={item.href.replace("#", "") === CurrentNavLink}
+              active={item.href.replace("#", "") === currentNavLink}
             />
           ))}
         </div>
