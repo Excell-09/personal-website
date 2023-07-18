@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply font-roboto;
   }
   body {
-    @apply bg-myAccent;
+    @apply bg-blue-500/20 scroll-smooth;
   }
 
   p {

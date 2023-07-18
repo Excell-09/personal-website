@@ -10,13 +10,14 @@ type Props = {
 
 const NAVLINK = [
   { label: "Home", href: "#home" },
+  { label: "About", href: "#aboutme" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
 ];
 
 export default function Navbar(props: Props) {
   const [isNavActive, setIsNavActive] = React.useState(false);
-  const [isNavLinkActive, setIsNavLinkActive] = React.useState("home");
+  const [CurrentNavLink, setCurrentNavLink] = React.useState("home");
 
   const handlerActiveNav = () => {
     if (Math.round(props.bodyRef.current?.scrollTop as number) > 250) {
@@ -29,8 +30,8 @@ export default function Navbar(props: Props) {
   const handlerActiveNavLink = () => {
     props.sections.forEach((section) => {
       const sectionTop = section.current?.offsetTop as number;
-      if (Math.round(props.bodyRef.current?.scrollTop as number) >= sectionTop - 150) {
-        setIsNavLinkActive(section.current?.getAttribute("id") as string);
+      if (Math.round(props.bodyRef.current?.scrollTop as number + 200) >= sectionTop) {
+        setCurrentNavLink(section.current?.getAttribute("id") as string);
       }
     });
   };
@@ -59,13 +60,13 @@ export default function Navbar(props: Props) {
                 <h5 className="font-bold text-lg sm:text-xl md:text-3xl">Jun Choi</h5>
                 <h6 className="font-bold text-xs md:text-base">Personal Website</h6>
               </a>
-              <div className="space-x-3 hidden sm:block">
+              <div className="space-x-2 md:space-x-3 hidden sm:block">
                 {NAVLINK.map((item, i) => (
                   <Navlink
                     label={item.label}
                     href={item.href}
                     key={i}
-                    active={item.href.replace("#", "") === isNavLinkActive}
+                    active={item.href.replace("#", "") === CurrentNavLink}
                   />
                 ))}
               </div>
@@ -95,13 +96,13 @@ export default function Navbar(props: Props) {
       z-50
       ${isNavActive ? "-translate-y-0 scale-100" : " -translate-y-full scale-0"}`}
       >
-        <div className="space-x-3 sm:py-4 sm:px-6 px-2 py-4">
+        <div className="space-x-2 sm:p-4 p-3">
           {NAVLINK.map((item, i) => (
             <Navlink
               label={item.label}
               href={item.href}
               key={i}
-              active={item.href.replace("#", "") === isNavLinkActive}
+              active={item.href.replace("#", "") === CurrentNavLink}
             />
           ))}
         </div>

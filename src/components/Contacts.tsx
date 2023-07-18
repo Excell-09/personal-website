@@ -28,7 +28,7 @@ export default function Contacts(props: Props) {
             href={link}
             referrerPolicy=""
           >
-            <Icon size={34} />
+            <Icon className="text-[20px] md:text-[26px]" />
           </a>
         ))}
       </>
@@ -45,7 +45,7 @@ export default function Contacts(props: Props) {
           href={link}
           referrerPolicy=""
         >
-          <Icon size={40} />
+          <Icon className="text-[24px] md:text-[30px]" />
         </a>
       ))}
     </>
