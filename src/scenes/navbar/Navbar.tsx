@@ -29,10 +29,7 @@ export default function Navbar(props: Props) {
   const handlerActiveNavLink = () => {
     props.sections.forEach((section) => {
       const sectionTop = section.current?.offsetTop as number;
-      if (
-        Math.round(props.bodyRef.current?.scrollTop as number) >=
-        sectionTop - 70
-      ) {
+      if (Math.round(props.bodyRef.current?.scrollTop as number) >= sectionTop - 150) {
         setIsNavLinkActive(section.current?.getAttribute("id") as string);
       }
     });
@@ -58,17 +55,9 @@ export default function Navbar(props: Props) {
         <div className={`py-2`}>
           <Container>
             <div className="flex flex-row items-center justify-between sm:px-3 px-2">
-              <a
-                href="#home"
-                className="text-center"
-                onClick={() => props.bodyRef?.current?.scrollTop}
-              >
-                <h5 className="font-bold text-lg sm:text-xl md:text-3xl">
-                  Jun Choi
-                </h5>
-                <h6 className="font-bold text-xs md:text-base">
-                  Personal Website
-                </h6>
+              <a href="#home" className="text-center" onClick={() => props.bodyRef?.current?.scrollTop}>
+                <h5 className="font-bold text-lg sm:text-xl md:text-3xl">Jun Choi</h5>
+                <h6 className="font-bold text-xs md:text-base">Personal Website</h6>
               </a>
               <div className="space-x-3 hidden sm:block">
                 {NAVLINK.map((item, i) => (
@@ -104,9 +93,7 @@ export default function Navbar(props: Props) {
       transition-all
       duration-300
       z-50
-      ${
-        isNavActive ? "-translate-y-0 scale-100" : " -translate-y-full scale-0"
-      }`}
+      ${isNavActive ? "-translate-y-0 scale-100" : " -translate-y-full scale-0"}`}
       >
         <div className="space-x-3 sm:py-4 sm:px-6 px-2 py-4">
           {NAVLINK.map((item, i) => (
