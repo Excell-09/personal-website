@@ -14,17 +14,7 @@ export default function Footer() {
         <Contacts size="large" />
       </div>
       <section className="mt-4">
-        <p className="text-myPrimary text-xl">
-          Created By{" "}
-          <a
-            href="https://www.linkedin.com/in/junchoi14"
-            target="blank"
-            className="underline"
-          >
-            Jun Choi
-          </a>{" "}
-          &#169;{new Date().getFullYear()}
-        </p>
+        <p className="text-myPrimary text-xl">junchoi.jobs@gmail.com</p>
       </section>
     </footer>
   );

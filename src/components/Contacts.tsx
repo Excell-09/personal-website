@@ -1,8 +1,5 @@
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiOutlineWhatsApp,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
+import { TfiEmail } from "react-icons/tfi";
 type Props = {
   size: "large" | "normal";
 };
@@ -13,6 +10,10 @@ const SOSIAL_MEDIA = [
   {
     link: "https://api.whatsapp.com/send?phone=6289602391929",
     Icon: AiOutlineWhatsApp,
+  },
+  {
+    link: "mailto:junchoi.jobs@gmail.com",
+    Icon: TfiEmail,
   },
 ];
 
@@ -26,7 +27,7 @@ export default function Contacts(props: Props) {
             className="border-4 border-myPrimary text-myPrimary rounded-full p-2 bg-mySecondary transition duration-300 hover:drop-shadow-3xl-primary"
             target="black"
             href={link}
-            referrerPolicy=""
+            referrerPolicy="no-referrer"
           >
             <Icon className="text-[20px] md:text-[26px]" />
           </a>
@@ -43,7 +44,7 @@ export default function Contacts(props: Props) {
           className="border-4 border-myPrimary text-myPrimary rounded-full p-2 bg-mySecondary transition duration-300 hover:drop-shadow-3xl-primary"
           target="black"
           href={link}
-          referrerPolicy=""
+          referrerPolicy="no-referrer"
         >
           <Icon className="text-[24px] md:text-[30px]" />
         </a>
